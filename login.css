@@ -1,0 +1,140 @@
+/* * Colori */
+:root {
+    --Primary-color: #e41414;
+    --Secondary-color : #ffffff;
+    --Third-color: #111111;
+    --Background-color:#100c0c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--Background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--Third-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slide-in 0.5s ease-in-out;
+    color: var(--Secondary-color);
+}
+
+.form {
+    flex: 1;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    color: var(--Secondary-color);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    color: var(--Secondary-color);
+    background-color: var(--Background-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: var(--Primary-color);
+    animation: shake 0.5s;
+}
+
+button {
+    width: 100%;
+    background-color: var(--Primary-color);
+    color: var(--Secondary-color);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--Primary-color);
+}
+
+a{
+    color: var(--Primary-color);
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.link {
+    text-align: center;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} 
+
+@media only screen and (max-width:850px) {
+    .container{
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .container{
+        width: 300px;
+    }
+}
